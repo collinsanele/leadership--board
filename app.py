@@ -9,6 +9,8 @@ app = Flask(__name__)
 db.init_app(app)
 db_url = "mysql://b092a4477c5645:ef512634@us-cdbr-east-04.cleardb.com/heroku_e98dfc099b1a935"
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url 
+app.config['SQLALCHEMY_POOL_TIMEOUT'] = 600 
+app.config['SQLALCHEMY_POOL_RECYCLE'] = 100
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
