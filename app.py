@@ -7,7 +7,7 @@ pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
 db.init_app(app)
-db_url = "your_db_url"
+db_url = "mysql://b092a4477c5645:ef512634@us-cdbr-east-04.cleardb.com/heroku_e98dfc099b1a935"
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
